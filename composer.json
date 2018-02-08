@@ -1,0 +1,22 @@
+{
+    "name": "evis/symony-cmd-skeleton",
+    "type": "project",
+    "authors": [
+        {
+            "name": "Evis Bregu",
+            "email": "evis.bregu@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": ">=7.0",
+        "symfony/console": "~3.3",
+        "symfony/yaml": "~3.3",
+        "monolog/monolog": "^1.23"
+    },
+    "autoload" : {
+        "psr-4" : {
+            "App\\" : "src"
+        }
+    }
+}

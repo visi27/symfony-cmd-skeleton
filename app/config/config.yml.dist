@@ -1,0 +1,10 @@
+mysql:
+  host: localhost
+  port: 3306
+  user: user
+  pass: user
+  db: reporting
+
+log:
+  log_name: 'Log'
+  log_path: 'tmp/log/app.log'
