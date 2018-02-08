@@ -23,10 +23,6 @@ class LoggerFactory
      */
     public static function create(array $config)
     {
-        //$channelName, $webHook, $username;
-        if (!self::validateConfig($config)) {
-            return false;
-        }
         $logger = new Logger($config['log_name']);
         $logger->pushHandler(new StreamHandler($config['log_path'], Logger::DEBUG));
 
@@ -47,14 +43,5 @@ class LoggerFactory
         ErrorHandler::register($logger);
 
         return $logger;
-    }
-
-    private static function validateConfig(array $config)
-    {
-        return (isset($config['cdr_log_path'])
-            && isset($config['mattermost']['channelName'])
-            && isset($config['mattermost']['webHook'])
-            && isset($config['mattermost']['username'])
-        );
     }
 }
